@@ -1,0 +1,199 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>JL player - Feature</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/heroes/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<meta name="theme-color" content="#7952b3">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+	  
+	  /* stylelint-disable selector-list-comma-newline-after */
+
+.blog-header {
+  line-height: 1;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.blog-header-logo {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+  font-size: 2.25rem;
+}
+
+.blog-header-logo:hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
+@media (min-width: 768px) {
+  .display-4 {
+    font-size: 3rem;
+  }
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-scroller .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+}
+
+.card-img-right {
+  height: 100%;
+  border-radius: 0 3px 3px 0;
+}
+
+.flex-auto {
+  flex: 0 0 auto;
+}
+
+.h-250 { height: 250px; }
+@media (min-width: 768px) {
+  .h-md-250 { height: 250px; }
+}
+
+
+/*
+ * Blog posts
+ */
+.blog-post {
+  margin-bottom: 4rem;
+}
+.blog-post-title {
+  margin-bottom: .25rem;
+  font-size: 2.5rem;
+}
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #727272;
+}
+    </style>
+  </head>
+  <body>
+
+<main class="container">
+
+  <div class="row g-5">
+    <div class="col-md-8">
+
+      <article class="blog-post">
+
+        <h2 class="text-primary mt-3">Supported formats</h2>
+		<dl class="fw-light">
+          <dt class="text-black-50 text-decoration-underline">Audio :</dt>
+          <dd>Vorbis, Opus, FLAC, ALAC, PCM/WAVE <ins>(μ-law, A-law)</ins>, MP1, MP2, MP3, AMR <ins>(NB, WB)</ins>, AAC <ins>(LC, ELD, HE; xHE on Android 9+)</ins>, AC-3, E-AC-3, DTS, DTS-HD, TrueHD</dd>
+          <dt class="text-black-50 text-decoration-underline">Video :</dt>
+          <dd> H.263, H.264 AVC <ins>(Baseline Profile; Main Profile on Android 6+)</ins>, H.265 HEVC, MPEG-4 SP, VP8, VP9, AV1</dd>
+		  <dt class="text-black-50 text-decoration-underline">Container :</dt>
+		  <dd>MP4, M4A, FMP4, MOV, WebM, MKV <ins>(Matroska)</ins>, Ogg, MPEG-TS, MPEG-PS, FLV <ins>(Not seekable)</ins>, AVI, JPEG motion photo <ins>(Only the MP4 content is extracted)</ins></dd>
+		  <!--<dt class="text-black-50 text-decoration-underline">Streaming :</dt>
+		  <dd>DASH, HLS, SmoothStreaming, RTSP</dd>-->
+		  <dt class="text-black-50 text-decoration-underline">Subtitles :</dt>
+		  <dd>SRT, SSA, TTML / SMPTE-TT, VTT, DVB, WebVTT, CEA-608, SubRip</dd>
+        </dl>
+		<h2 class="text-primary">Playback feature</h2>
+        <ul class="fw-light">
+          <li><code class="language-plaintext highlighter-rouge">Audio/Subtitle</code> track selection.</li>
+          <li><code class="language-plaintext highlighter-rouge">Playlist support</code> to skip to next or previous video.</li>
+          <li>Playback <code class="language-plaintext highlighter-rouge">speed control.</code></li>
+          <li><code class="language-plaintext highlighter-rouge">Mute</code> option has been available.</li>
+          <li><code class="language-plaintext highlighter-rouge">PIP (Picture in picture) </code>on <ins>Android 8+</ins> (resizeable on <ins>Android 11+</ins>).</li>
+          <li><code class="language-plaintext highlighter-rouge">Resize</code> (Fit/Crop).</li>
+		  <li><code class="language-plaintext highlighter-rouge">Volume boost.</code></li>
+		  <li><code class="language-plaintext highlighter-rouge">Auto frame</code> rate matching on <ins>Android 6+</ins>.</li>
+		  <li><code class="language-plaintext highlighter-rouge">Touch lock.</code></li>
+		  <li>3rd party <code class="language-plaintext highlighter-rouge">Eualizer / audio processing</code> support.</li>
+		  <li><code class="language-plaintext highlighter-rouge">Pause</code> playback when disconnecting headphones.</li>
+        </ul>
+        <h2 class="text-primary">Gesture control</h2>
+        <ul class="fw-light">
+		  <li><code class="language-plaintext highlighter-rouge">Horizontal swipe</code> and <code class="language-plaintext highlighter-rouge">double tap</code> to quickly seek.</li>
+          <li><code class="language-plaintext highlighter-rouge">Vertical swipe</code> to change brightness (left) / volume (right).</li>
+          <li>Pinch to <code class="language-plaintext highlighter-rouge">zoom </code><ins>(Android 7+)</ins></li>
+		</ul>
+        <h3 class="text-primary">Application feature</h3>
+        <ul class="fw-light">
+		  <li>App supports <code class="language-plaintext highlighter-rouge">Dark</code> and <code class="language-plaintext highlighter-rouge">Light mode</code>.</li>
+          <li>Videos are listed in <code class="language-plaintext highlighter-rouge">Folder and list</code> mode.</li>
+          <li>Videos can also be displayed in <code class="language-plaintext highlighter-rouge">grid</code> and <code class="language-plaintext highlighter-rouge">list style</code>.</li>
+		  <li><code class="language-plaintext highlighter-rouge">Search </code>optin to find video.</li>
+		  <li><code class="language-plaintext highlighter-rouge">Multi-select</code> option enables you to <code class="language-plaintext highlighter-rouge">share</code> and <code class="language-plaintext highlighter-rouge">delete</code> videos.</li>
+		  <li>Video file <code class="language-plaintext highlighter-rouge">rename </code>option.</li>
+		  <li>Video info option lists most <code class="language-plaintext highlighter-rouge">advanced information </code>about video.</li>
+		  <li>No <code class="language-plaintext highlighter-rouge">tracking </code>or <code class="language-plaintext highlighter-rouge">excessive </code> permission.</li>
+		</ul>
+		
+		<h3 class="text-primary">Tap control</h3>
+		<img src="tap_control.webp" class="img-fluid rounded" alt="Responsive image">
+		<ul class="fw-light mt-4">
+		  <li>Double tap on <code class="language-plaintext highlighter-rouge">left</code> to rewind 10sec.</li>
+		  <li>Double tap on <code class="language-plaintext highlighter-rouge">right</code> to forward 10sec.</li>
+		  <li>Double tap on <code class="language-plaintext highlighter-rouge">center</code> to pause and play.</li>
+		</ul>
+		
+		<h3 class="text-primary">Caption styling</h3>
+		<img src="caption.png" class="img-fluid rounded" alt="Responsive image">
+		<ul class="fw-light mt-4">
+		  <li>Double tap on <code class="language-plaintext highlighter-rouge">left</code> to rewind 10sec.</li>
+		  <li>Double tap on <code class="language-plaintext highlighter-rouge">right</code> to forward 10sec.</li>
+		  <li>Double tap on <code class="language-plaintext highlighter-rouge">center</code> to pause and play.</li>
+		</ul>
+      </article>
+
+    </div>
+
+  </div>
+
+</main>
+  </body>
+</html>
